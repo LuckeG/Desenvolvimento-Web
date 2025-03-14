@@ -32,5 +32,29 @@
     
 
     <img src="https://s2-g1.glbimg.com/HSrodiZSXk_3xYVUtPVwjQrDtkc=/0x0:748x525/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/B/M/NMeKcJTMGaAuLD7yX4mQ/twice.jpg" alt="Twice all 9">
+
+    <video src="youtube_LGwY64UFWzs_720x1280_h264.mp4" autoplay></video>
+
+    <canvas id="tela" width="800" height="600"></canvas>
+    <script>
+        let tela = document.querySelector("#tela");
+        const ctx = tela.getContext("2d")
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = "purple"
+        ctx.strokeRect(20,20, 200,200)
+        ctx.beginPath();
+        ctx.lineTo(10, 300);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+    </script>
+    <button>Não Clique Aqui</button>
+    <select name="" id="">
+        <option value="">Um</option>
+        <option value="">Dois</option>
+    </select>
+
+    <input type="date">
+    <input type="text">
 </body>
 </html>
