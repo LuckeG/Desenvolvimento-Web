@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fabio {
+            background-color: blueviolet;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="besteira"></div>
+    <script defer>
+
+        const besteira = document.getElementById("#besteira"); //ShadowRoot
+
+        const shadowRoot = besteira.attachShadow({ mode: "open" });
+
+        const novaDiv = document.createElement('div')
+        novaDiv.classList = ["fabio", "junior"]
+        novaDiv.innerText = "Mexe a cabeça"
+        novaDiv.addEventListener("click", clicou())
+
+        const style = document.createElement("style")
+        style.textContent = `
+        .fabio {
+            background-color: cyan;
+        }
+        `
+
+        const script = document.createElement("script");
+        script.innerHTML = `
+            fuction clicou(){
+                alert("dançar kuduro")
+            }
+        `
+
+        shadowRoot.append(script)
+        shadowRoot.appendChild(novaDiv)
+        shadowRoot.appendChild(style)
+
+        
+
+    </script>
+</body>
+</html>
